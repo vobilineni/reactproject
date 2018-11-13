@@ -5,7 +5,7 @@ import App from './App';
 
 const routes = (
     <div>
-        <Route path="/app" component={App} />
+        <Route path="/" component={App} />
     </div>
 );
 // <Route path="/custodyHoldings" component={CustodyHoldingsContainer} />
