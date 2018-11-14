@@ -12,6 +12,9 @@ class App extends Component {
             <p>To manage project click here &nbsp;
                 <a className="App-link" href="projects" rel="noopener noreferrer" >Project Manager</a>
             </p>
+            <p>Click here to login &nbsp;
+                <a className="App-link" href="logins" rel="noopener noreferrer" >Login</a>
+            </p>
         </header>
       </div>
     );
