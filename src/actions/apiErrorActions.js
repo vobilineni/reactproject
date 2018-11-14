@@ -1,4 +1,4 @@
-import { API_ERROR } from '../constants/actionTypes';
+import { API_ERROR } from './actionTypes';
 
 export default function apiErrorAction(error) {
   return {
