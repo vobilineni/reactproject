@@ -3,8 +3,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Route } from 'react-router-dom';
-import Routes from './RootRouter';
-import App from './App';
+import Routes from '../../routers/RootRouter';
+import App from '../../components/App';
 
 describe('Router', () => {
   it('renders correct routes', () => {

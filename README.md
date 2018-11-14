@@ -9,6 +9,12 @@ In the project directory, to download node-modules you have to run:
 To start project you have to run:
 ### `npm start`
 
+My development
+
+To see or updated project list nav to 
+### `../projects`
+
+
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 

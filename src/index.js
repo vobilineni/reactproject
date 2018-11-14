@@ -1,16 +1,26 @@
 import React from 'react';
 import { render } from 'react-dom';
-// import ReactDOM from 'react-dom';
-import RootRouter from './RootRouter';
-import './index.css';
-// import App from './App';
+import { Provider } from 'react-redux';
+import { AppContainer } from 'react-hot-loader';
+import { IntlProvider } from 'react-intl';
+import RootRouter from './routers/RootRouter';
+import configureStore from './store/rootStore';
+import './styles/index.css';
 import * as serviceWorker from './serviceWorker';
+
+const rootstore = configureStore();
 
 const renderApp = () => {
     render(
+        <Provider store={rootstore}>
             <React.Fragment>
-                <RootRouter />
-            </React.Fragment>,
+              <AppContainer>
+                <IntlProvider>
+                    <RootRouter />
+                </IntlProvider>
+              </AppContainer>
+            </React.Fragment>
+        </Provider>,
         document.getElementById('root')
     );
 };
