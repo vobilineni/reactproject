@@ -1,7 +1,7 @@
-import { call, takeEvery } from 'redux-saga/effects';
+import {call, takeEvery} from 'redux-saga/effects';
 import * as actionTypes from '../actions/actionTypes';
-import { postData } from '../api/httpClient';
-import { withApiErrorHandling } from './errorHandler';
+import {postData} from '../api/httpClient';
+import {withApiErrorHandling} from './errorHandler';
 
 export function* logout() {
   yield* withApiErrorHandling(function* apiHandlingCallback() {

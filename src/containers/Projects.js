@@ -1,47 +1,53 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import uuid from 'uuid';
 import ProjectUpdate from '../components/project/ProjectUpdate';
 import AddProject from '../components/project/AddProject';
 import '../styles/App.css';
 
 class Projects extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      projects:[]
+      projects: []
     }
   }
-  componentWillMount(){
-    this.setState({projects:[
-      {
-        id:uuid.v4(),
-        title: 'Business Website',
-        category: 'web Design'
-      },
-      {
-        id:uuid.v4(),
-        title: 'Socal App',
-        category: 'Mobile Development'
-      },
-      {
-        id:uuid.v4(),
-        title: 'Ecommerce Shipping Cart',
-        category: 'web Development'
-      }
-    ]});
+
+  componentWillMount() {
+    this.setState({
+      projects: [
+        {
+          id: uuid.v4(),
+          title: 'Business Website',
+          category: 'web Design'
+        },
+        {
+          id: uuid.v4(),
+          title: 'Socal App',
+          category: 'Mobile Development'
+        },
+        {
+          id: uuid.v4(),
+          title: 'Ecommerce Shipping Cart',
+          category: 'web Development'
+        }
+      ]
+    });
   }
-  handleAddProject(project){
+
+  handleAddProject(project) {
     //console.log(project);
     let projects = this.state.projects;
     projects.push(project);
-    this.setState({Projects:projects});
+    this.setState({Projects: projects});
   }
-  handleDeleteProject(id){
+
+  handleDeleteProject(id) {
     let projects = this.state.projects;
     let index = projects.findIndex(x => x.id === id);
     projects.splice(index, 1);
-    this.setState({projects:projects});
+    this.setState({projects: projects});
   }
+
   render() {
     return (
       <div className="App">
@@ -51,4 +57,5 @@ class Projects extends Component {
     );
   }
 }
+
 export default Projects;

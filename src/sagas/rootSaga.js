@@ -1,5 +1,5 @@
-import { all, fork } from 'redux-saga/effects';
-import { watchLogout } from './authSagas';
+import {all, fork} from 'redux-saga/effects';
+import {watchLogout} from './authSagas';
 
 
 export default function* rootSaga() {

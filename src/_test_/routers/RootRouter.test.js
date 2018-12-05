@@ -3,7 +3,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Route } from 'react-router-dom';
-import Routes from '../../routers/RootRouter';
+import Routes from '../../routes/RootRouter';
 import App from '../../components/App';
 
 describe('Router', () => {

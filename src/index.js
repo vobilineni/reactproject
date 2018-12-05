@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import { IntlProvider } from 'react-intl';
-import RootRouter from './routers/RootRouter';
+import RootRouter from './routes/RootRouter';
 import configureStore from './store/rootStore';
 import './styles/index.css';
 import * as serviceWorker from './serviceWorker';
@@ -30,10 +30,10 @@ renderApp();
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-// if (module.hot) {
-//     module.hot.accept('RootRouter.js', () => {
-//         // eslint-disable-next-line
-//         const nextApp = require('RootRouter.js');
-//         renderApp(nextApp);
-//     });
-// }
+if (module.hot) {
+    module.hot.accept('./routes/RootRouter.js', () => {
+        // eslint-disable-next-line
+        const nextApp = require('./routes/RootRouter.js');
+        renderApp(nextApp);
+    });
+}

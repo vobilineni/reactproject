@@ -1,4 +1,4 @@
-import { put } from 'redux-saga/effects';
+import {put} from 'redux-saga/effects';
 import apiErrorAction from '../actions/apiErrorActions';
 
 export function* withApiErrorHandling(generator) {
